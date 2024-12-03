@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - Restaurante</title>
+  <link rel="stylesheet" href="styles1.css">
+</head>
+<body>
+  <main class="login-container">
+    <section class="form-container">
+      <h1>Bem-vindo</h1>
+      <form id="login-form">
+        <h2>Login</h2>
+        <input type="email" id="login-email" placeholder="Email" required>
+        <input type="password" id="login-password" placeholder="Senha" required>
+        <button type="submit">Entrar</button>
+        <p>Ainda não tem uma conta? <a href="#" id="switch-to-signup">Cadastre-se</a></p>
+      </form>
+      <form id="signup-form" style="display: none;">
+        <h2>Cadastro</h2>
+        <input type="text" id="signup-name" placeholder="Nome Completo" required>
+        <input type="email" id="signup-email" placeholder="Email" required>
+        <input type="password" id="signup-password" placeholder="Senha" required>
+        <button type="submit">Cadastrar</button>
+        <p>Já tem uma conta? <a href="#" id="switch-to-login">Login</a></p>
+      </form>
+    </section>
+  </main>
+  <script src="scripts1.js"></script>
+</body>
+</html>

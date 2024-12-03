@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cardápio</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Cardápio</h1>
+    <button id="logout">Sair</button>
+  </header>
+  <main>
+    <section id="cardapio">
+      <h2>Itens do Cardápio</h2>
+      <div class="menu-item" data-id="1" data-name="Pizza Margherita" data-price="35">
+        <img src="https://www.donguilherme.com.br/assets/userfiles/archives/6405dff0d4d8d.jpg" alt="Pizza Margherita">
+        <h3>Pizza Margherita</h3>
+        <p>Preço: R$ 35,00</p>
+        <button class="add-to-cart">Adicionar ao Carrinho</button>
+      </div>
+    
+      <!-- Mais itens do cardápio -->
+    </section>
+    <section id="carrinho">
+      <h2>Meu Carrinho</h2>
+      <ul id="cart-list"></ul>
+      <p id="total-price">Total: R$ 0,00</p>
+      <button id="finalizar-pedido">Finalizar Pedido</button>
+    </section>
+  </main>
+  <script>
+    // Verifica se o usuário está logado
+    const loggedInUser = JSON.parse(localStorage.getItem('loggedInUser'));
+    if (!loggedInUser) {
+      alert('Você precisa estar logado para acessar o cardápio!');
+      window.location.href = "index.html";
+    }
+
+    // Logout
+    document.getElementById('logout').addEventListener('click', () => {
+      localStorage.removeItem('loggedInUser');
+      alert('Você saiu da sua conta.');
+      window.location.href = "index.html";
+    });
+  </script>
+  <script src="scripts.js"></script>
+</body>
+</html>
